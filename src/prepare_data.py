@@ -6,8 +6,6 @@ from embeddings import create_embedding_matrix
 from utils import save_model_and_results
 import pickle
 
-import simple_model
-
 TRAIN_FILE = '../data/train.csv'
 TEST_FILE = '../data/test.csv'
 NUM_TRAIN_SAMPLES = None;

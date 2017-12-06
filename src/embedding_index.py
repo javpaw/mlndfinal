@@ -2,11 +2,11 @@ import pickle
 import numpy as np
 import codecs
 
-original_path = '../data/glove.6B.%sd.txt'
-picke_path = '../data/embedding_dict_%s.pickle'
+original_path = '../data/glove.840B.300d.txt'
+picke_path = '../processed_data/embedding_dict.pickle'
 
-def store_embedding_index(dims = 50):
-	path = original_path%dims
+def store_embedding_index():
+	path = original_path
 	with open(path) as f:
 		embeddings_index = {}
 		for line in f:
@@ -18,11 +18,6 @@ def store_embedding_index(dims = 50):
 		with open(picke_path%dims, 'wb') as store:
 			pickle.dump(embeddings_index, store, pickle.HIGHEST_PROTOCOL)
  
-def get_embedding_index(dims):
-	with open(picke_path%dims, 'rb') as f:
+def get_embedding_index():
+	with open(picke_path, 'rb') as f:
 			return pickle.load(f)
-
-if __name__ == '__main__':
-	#store_embedding_index(100)
-	index = get_embedding_index(100)
-	import ipdb; ipdb.set_trace()
