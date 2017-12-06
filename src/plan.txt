@@ -1,0 +1,5 @@
+leer los datos.  DONE
+limpiar los datos DONE
+despues crear el input con glov.
+despues aplicar un modelo especificol.
+Despues crear las graficas para ver el progreso comenzando con history.
